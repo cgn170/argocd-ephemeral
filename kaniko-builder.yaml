@@ -1,0 +1,29 @@
+kind: Pod
+spec:
+  serviceAccountName: jenkins-k8s-admin
+  containers:
+    - name: kaniko
+      image: gcr.io/kaniko-project/executor:debug
+      imagePullPolicy: Always
+      command:
+        - sleep
+      args:
+        - 7200
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+      volumeMounts:
+        - name: docker-config
+          mountPath: /kaniko/.docker
+          readOnly: true
+  volumes:
+    - name: docker-config
+      secret:
+        secretName: harbor-registry-secret
+        items:
+          - key: .dockerconfigjson
+            path: config.json
