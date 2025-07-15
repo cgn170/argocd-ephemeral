@@ -1,6 +1,10 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [v0.1.5] - 2025-07-15
+
+- No notable changes in this release
+
 ## [v0.1.3] - 2025-07-15
 
 - No notable changes in this release
