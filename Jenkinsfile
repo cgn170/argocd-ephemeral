@@ -73,9 +73,6 @@ pipeline {
     }
 
     stage('Build & Push with Kaniko') {
-      when {
-        branch 'main'
-      }
       steps {
             script {
                 container(name: 'kaniko', shell: '/busybox/sh') {
