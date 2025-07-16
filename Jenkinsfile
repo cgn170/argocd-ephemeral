@@ -63,7 +63,7 @@ pipeline {
     stage("Get Version"){
       steps {
         script {
-          env.HEAD_SHA = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
+          env.HEAD_SHA = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
           env.VERSION =  env.HEAD_SHA
           echo "Branch: ${env.GIT_BRANCH}"
           echo "Git tag version: ${VERSION}"
