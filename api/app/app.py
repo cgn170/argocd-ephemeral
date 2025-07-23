@@ -50,6 +50,6 @@ async def nuevo():
     return {
         "status_code": status.HTTP_200_OK,
         "response_type": "success",
-        "detail": "NUEVO endpoint"
+        "detail": "NUEVO endpoint cambio aqui"
     }
 
