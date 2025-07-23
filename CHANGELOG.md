@@ -1,6 +1,12 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
+## [v0.1.17] - 2025-07-23
+
+## 🚀 Features
+
+- nuevo cambio en feature branch
+
 ## [v0.1.15] - 2025-07-23
 
 ## 🚀 Features
